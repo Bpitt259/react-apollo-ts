@@ -1,0 +1,50 @@
+{
+  "extends": [
+    "airbnb",
+    "airbnb/hooks",
+    "prettier",
+    "plugin:jsx-a11y/recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "plugins": ["prettier", "react-hooks", "jsx-a11y"],
+  "env": {
+    "browser": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module",
+    "ecmaFeatures": { "jsx": true }
+  },
+  "parser": "@typescript-eslint/parser",
+  "rules": {
+    "prettier/prettier": ["error"],
+    // React rules
+    "react/destructuring-assignment": "off",
+    "react/jsx-fragments": ["error", "element"],
+    "react/jsx-props-no-spreading": "off",
+    "react/jsx-filename-extension": [1, { "extensions": [".tsx", ".ts"] }],
+    "react/jsx-one-expression-per-line": "off",
+    "react/jsx-curly-newline": "off",
+    "react/no-multi-comp": ["off", { "ignoreStateless": true }],
+    "react/no-unescaped-entities": "off",
+    "react/no-danger": "warn",
+    "react/prop-types": "off",
+    "react/no-array-index-key": "warn",
+    "react/jsx-wrap-multilines": "off",
+    // TS rules
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/no-use-before-define": ["error"],
+    "no-underscore-dangle": "off",
+    "func-names": "off",
+    "no-plusplus": "off",
+    "import/prefer-default-export": "off",
+    "import/extensions": "off",
+    "no-use-before-define": "off"
+  },
+  "settings": {
+    "react": { "version": "detect" },
+    "import/resolver": {
+      "typescript": {}
+    }
+  }
+}
